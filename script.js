@@ -1,46 +1,62 @@
-// Typing effect for hero section
-const words = ["Frontend Developer", "WordPress Specialist", "SEO & Marketing", "Content Writer"];
-let i = 0; let j = 0; let currentWord = ''; let isDeleting = false; const typing = document.getElementById('typing');
+/* NAVBAR SCROLL EFFECT */
+const navbar = document.getElementById("navbar");
 
-function type() {
-  if(i >= words.length) i=0;
-  const fullWord = words[i];
-
-  if(!isDeleting){
-    currentWord = fullWord.slice(0,j+1);
-    typing.textContent = currentWord;
-    j++;
-    if(j === fullWord.length){ isDeleting = true; setTimeout(type,1000); return; }
-  } else {
-    currentWord = fullWord.slice(0,j-1);
-    typing.textContent = currentWord;
-    j--;
-    if(j===0){ isDeleting=false; i++; }
-  }
-  setTimeout(type,150);
-}
-type();
-
-// Scroll reveal for roles
-const roles = document.querySelectorAll('.role');
-window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight / 1.1;
-  roles.forEach(role => {
-    const top = role.getBoundingClientRect().top;
-    if(top < triggerBottom){
-      role.style.opacity = 1;
-      role.style.transform = 'translateY(0)';
-    } else {
-      role.style.opacity = 0;
-      role.style.transform = 'translateY(30px)';
-    }
-  });
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 80);
 });
 
-// Project card click (demo alert)
-const projects = document.querySelectorAll('.project-card');
-projects.forEach(proj => {
-  proj.addEventListener('click', () => {
-    alert(proj.querySelector('h3').textContent + '\n\nMore details coming soon...');
-  });
+/* TEXT ROTATION */
+const words = [
+  "WEB DEVELOPER",
+  "WORDPRESS EXPERT",
+  "SOCIAL MEDIA MANAGER",
+  "SEO STRATEGIST",
+  "CONTENT WRITER"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const textElement = document.getElementById("text");
+
+function typeEffect() {
+  const current = words[wordIndex];
+  
+  if (!isDeleting) {
+    textElement.textContent = current.slice(0, ++charIndex);
+    if (charIndex === current.length) {
+      setTimeout(() => isDeleting = true, 1200);
+    }
+  } else {
+    textElement.textContent = current.slice(0, --charIndex);
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 60 : 120);
+}
+
+typeEffect();
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#ffffff" },
+    size: { value: 2 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { speed: 1 }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "grab" }
+    }
+  }
 });
