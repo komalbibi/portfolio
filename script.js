@@ -52,7 +52,7 @@ particlesJS("particles-js", {
       opacity: 0.4,
       width: 1
     },
-    move: { speed: 1 }
+    move: { speed: 3 }
   },
   interactivity: {
     events: {

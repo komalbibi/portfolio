@@ -152,3 +152,52 @@ nav a:hover::after {
     gap: 60px;
   }
 }
+
+.about{
+  margin: 140px ;
+}
+h1{
+  font-size: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.description{
+  font-size: 20px;
+  color: #727272;
+  line-height: 34px;
+  width: 900px;
+  margin-top: 20px;
+
+}
+.resume-btn{
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+  font-weight: 500;
+  padding: 10px 0px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  line-height: 12px;
+}
+.resume-btn::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+background-color: #f2c94c;
+transition: height 0.4s ease;
+z-index: -1;
+
+}
+.resume-btn:hover::after{
+  height: 100%;
+  
+}
+.resume-btn:hover {
+  transform: translateY(-2px);
+}
