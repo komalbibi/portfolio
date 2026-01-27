@@ -201,3 +201,95 @@ z-index: -1;
 .resume-btn:hover {
   transform: translateY(-2px);
 }
+
+.portfolio {
+  width: 90%;
+  margin: 60px auto;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.filters li {
+  color: #999;
+}
+
+.filters li.active {
+  color: #000;
+  border-bottom: 2px solid #f1c40f;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project span {
+  color: #f1c40f;
+  font-size: 13px;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 15px;
+  color: #f1c40f;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -60,3 +60,44 @@ particlesJS("particles-js", {
     }
   }
 });
+
+
+const filters = document.querySelectorAll(".filters li");
+const projects = document.querySelectorAll(".project");
+const modal = document.querySelector(".modal");
+
+filters.forEach(filter => {
+  filter.addEventListener("click", () => {
+    filters.forEach(f => f.classList.remove("active"));
+    filter.classList.add("active");
+
+    const category = filter.dataset.filter;
+
+    projects.forEach(project => {
+      project.style.display =
+        category === "all" || project.dataset.category === category
+        ? "block"
+        : "none";
+    });
+  });
+});
+
+/* MODAL LOGIC */
+projects.forEach(project => {
+  project.addEventListener("click", () => {
+    document.getElementById("modal-img").src = project.dataset.img;
+    document.getElementById("modal-title").innerText = project.dataset.title;
+    document.getElementById("modal-desc").innerText = project.dataset.desc;
+    document.getElementById("modal-link").href = project.dataset.link;
+
+    modal.style.display = "flex";
+  });
+});
+
+document.querySelector(".close").onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
