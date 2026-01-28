@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Komal Portfolio</title>
+  <title>Komal Tech Studio</title>
   <link rel="stylesheet" href="style.css" />
   <!-- particles.js cdn link -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <!-- stats.js lib -->
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
@@ -15,21 +18,36 @@
 
   <!-- NAVBAR -->
   <header id="navbar">
-    <div class="logo">H.</div>
+    <div class="logo">KTS</div>
     <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">What I Do</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+
+        <!-- SERVICES DROPDOWN -->
+        <li class="dropdown">
+          <a href="#">
+            Services <span class="arrow">▼</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="./webdev.html">Web Development</a></li>
+            <li><a href="writing.html">Content Writing</a></li>
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="./marketing.html">Social Media Marketing</a></li>
+            <li><a href="wordpress.html">Wordpress</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="./work.html">Works</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="/blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
   </header>
-
-  <!-- HERO -->
-  <div id="particles-js"></div>
-
+  <!-- hero -->
   <section class="hero">
     <div class="overlay"></div>
 
@@ -39,7 +57,14 @@
         <span class="cursor">|</span>
       </h1>
     </div>
+
+    <!-- ARROW -->
+    <div class="scroll-down">
+      <span></span>
+    </div>
   </section>
+
+
   <!-- ABOUT -->
   <section class="about">
     <div class="intro">
@@ -61,7 +86,7 @@
   <!-- services -->
 
   <section class="services">
-    <h2 class="section-title">What I Do</h2>
+    <h2 class="section-title">What We Do</h2>
 
     <div class="services-grid">
 
@@ -69,7 +94,7 @@
         <i class="fa-solid fa-code"></i>
         <h3>Frontend Web Development</h3>
         <p>
-          I build modern, responsive, and user-friendly websites using HTML, CSS,
+          We build modern, responsive, and user-friendly websites using HTML, CSS,
           JavaScript, and Bootstrap with a strong focus on performance and clean UI.
         </p>
       </div>
@@ -78,7 +103,7 @@
         <i class="fa-brands fa-wordpress"></i>
         <h3>WordPress Development</h3>
         <p>
-          I create custom WordPress websites, landing pages, and business sites,
+          We create custom WordPress websites, landing pages, and business sites,
           handling themes, plugins, and on-page customization efficiently.
         </p>
       </div>
@@ -87,7 +112,7 @@
         <i class="fa-solid fa-bullhorn"></i>
         <h3>Social Media Management</h3>
         <p>
-          I manage social media profiles, plan content strategies, and improve
+          We manage social media profiles, plan content strategies, and improve
           engagement through consistent branding and audience-focused posting.
         </p>
       </div>
@@ -96,7 +121,7 @@
         <i class="fa-solid fa-magnifying-glass-chart"></i>
         <h3>SEO Optimization</h3>
         <p>
-          I optimize websites for search engines using proper structure,
+          We optimize websites for search engines using proper structure,
           keyword research, on-page SEO, and performance optimization techniques.
         </p>
       </div>
@@ -105,7 +130,7 @@
         <i class="fa-solid fa-chart-line"></i>
         <h3>Analytics & Insights</h3>
         <p>
-          I analyze website and social media performance using analytics tools
+          We analyze website and social media performance using analytics tools
           to track growth, user behavior, and improve overall digital strategy.
         </p>
       </div>
@@ -114,105 +139,164 @@
         <i class="fa-solid fa-pen-nib"></i>
         <h3>Content Writing</h3>
         <p>
-          I write clear, engaging, and SEO-friendly content for websites,
+          We write clear, engaging, and SEO-friendly content for websites,
           blogs, and social media that communicates value effectively.
         </p>
       </div>
 
     </div>
   </section>
-<!-- projects -->
- <section class="portfolio">
+  <!-- projects -->
+  <section class="portfolio">
 
-  <h2>Recent Works</h2>
+    <h2>Recent Works</h2>
 
-  <!-- FILTERS -->
-  <ul class="filters">
-    <li class="active" data-filter="all">All</li>
-    <li data-filter="frontend">Frontend Websites</li>
-    <li data-filter="wordpress">WordPress Sites</li>
-    <li data-filter="marketing">Social Media Marketing</li>
-    <li data-filter="content">Content Writing</li>
-  </ul>
+    <!-- FILTERS -->
+    <ul class="filters">
+      <li class="active" data-filter="all">All</li>
+      <li data-filter="frontend">Frontend Websites</li>
+      <li data-filter="wordpress">WordPress Sites</li>
+      <li data-filter="marketing">Social Media Marketing</li>
+      <li data-filter="content">Content Writing</li>
+    </ul>
 
-  <!-- PROJECT GRID -->
-  <div class="projects">
+    <!-- PROJECT GRID -->
+    <div class="projects">
 
-    <div class="project" data-category="frontend"
-         data-title="Frontend Portfolio"
-         data-desc="Modern frontend website using HTML, CSS and JS."
-         data-img="images/p1.jpg"
-         data-link="https://example.com">
-      <img src="./portfolio pic.png">
-      <span>Frontend</span>
-      <h3>Frontend Portfolio</h3>
+      <div class="project" data-category="frontend" data-title="Frontend Portfolio"
+        data-desc="Modern frontend website using HTML, CSS and JS." data-img="images/p1.jpg"
+        data-link="https://example.com">
+        <img src="./portfolio pic.png">
+        <span>Frontend</span>
+        <h3>Frontend Portfolio</h3>
+      </div>
+
+      <div class="project" data-category="wordpress" data-title="WordPress Business Site"
+        data-desc="Custom WordPress website for a business client." data-img="images/p2.jpg"
+        data-link="https://example.com">
+        <img src="./wordpress.png">
+        <span>WordPress</span>
+        <h3>Business Website</h3>
+      </div>
+
+      <div class="project" data-category="marketing" data-title="Instagram Marketing"
+        data-desc="Social media campaign for brand growth." data-img="images/p3.jpg" data-link="https://example.com">
+        <img src="./insta-post.png">
+        <span>Marketing</span>
+        <h3>Instagram Campaign</h3>
+      </div>
+
+      <div class="project" data-category="content" data-title="Blog Writing" data-desc="SEO optimized blog articles."
+        data-img="images/p4.jpg" data-link="https://example.com">
+        <img src="./blog.png">
+        <span>Content</span>
+        <h3>SEO Blogs</h3>
+      </div>
+
+      <div class="project" data-category="frontend" data-title="Landing Page" data-desc="High conversion landing page."
+        data-img="images/p5.jpg" data-link="https://example.com">
+        <img src="./kbiz-.png">
+        <span>Frontend</span>
+        <h3>Landing Page</h3>
+      </div>
+
+      <div class="project" data-category="marketing" data-title="Facebook Ads"
+        data-desc="Paid ads strategy & creatives." data-img="images/p6.jpg" data-link="https://example.com">
+        <img src="./fb.png">
+        <span>Marketing</span>
+        <h3>Facebook Ads</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" target="_blank" class="view-btn">View Project</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand Section -->
+    <div class="footer-col brand">
+      <div class="logo">Komal Tech Studio</div>
+      <p>
+        Komal Tech Studio aims to covers multiple services under
+        one umbrella. It provided software solutions that fit best 
+        with your expactations.
+      
+      </p>
+
+      <div class="contact-box">
+        <span>CONTACT US 24/7</span>
+        <h3>+92 3115969527</h3>
+      </div>
     </div>
 
-    <div class="project" data-category="wordpress"
-         data-title="WordPress Business Site"
-         data-desc="Custom WordPress website for a business client."
-         data-img="images/p2.jpg"
-         data-link="https://example.com">
-      <img src="./wordpress.png">
-      <span>WordPress</span>
-      <h3>Business Website</h3>
+    <!-- Explore Links -->
+    <div class="footer-col colone">
+      <h4>Explore Links</h4>
+      <ul>
+         <li><a href="#">Home</a></li>
+        <li><a href="./work.html">Works</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+       
+      </ul>
     </div>
 
-    <div class="project" data-category="marketing"
-         data-title="Instagram Marketing"
-         data-desc="Social media campaign for brand growth."
-         data-img="images/p3.jpg"
-         data-link="https://example.com">
-      <img src="./insta-post.png">
-      <span>Marketing</span>
-      <h3>Instagram Campaign</h3>
+    <!-- Useful Links -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="./webdev.html">Web Development</a></li>
+        <li><a href="./wordpress.html">WordPress</a></li>
+        <li><a href="./marketing.html">Social Media Marketing</a></li>
+        <li><a href="/writing.html">Content Writing</a></li>
+        <li><a href="./seo.html">SEO</a></li>
+      </ul>
     </div>
 
-    <div class="project" data-category="content"
-         data-title="Blog Writing"
-         data-desc="SEO optimized blog articles."
-         data-img="images/p4.jpg"
-         data-link="https://example.com">
-      <img src="./blog.png">
-      <span>Content</span>
-      <h3>SEO Blogs</h3>
-    </div>
-
-    <div class="project" data-category="frontend"
-         data-title="Landing Page"
-         data-desc="High conversion landing page."
-         data-img="images/p5.jpg"
-         data-link="https://example.com">
-      <img src="./kbiz-.png">
-      <span>Frontend</span>
-      <h3>Landing Page</h3>
-    </div>
-
-    <div class="project" data-category="marketing"
-         data-title="Facebook Ads"
-         data-desc="Paid ads strategy & creatives."
-         data-img="images/p6.jpg"
-         data-link="https://example.com">
-      <img src="./fb.png">
-      <span>Marketing</span>
-      <h3>Facebook Ads</h3>
+    <!-- Solutions / Contact -->
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <ul class="contact-list">
+        <li>📞 +55 (66633) 25 66</li>
+        <li>📞 +55 (66633) 25 77</li>
+        <li>✉️ info.komaltechstudio@company.com</li>
+        <li>📍Peshawar Pakistan</li>
+      </ul>
     </div>
 
   </div>
-</section>
 
-<!-- MODAL -->
-<div class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="modal-img">
-    <h3 id="modal-title"></h3>
-    <p id="modal-desc"></p>
-    <a id="modal-link" target="_blank" class="view-btn">View Project</a>
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <p>© 2026 by <strong>komaltechstudio</strong>. All rights reserved.</p>
   </div>
-</div>
+</footer>
 
+  
+  
   <script src="script.js"></script>
+
+
+
 </body>
 
 </html>
