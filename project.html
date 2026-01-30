@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Komal Tech Studio | Blogs</title>
+  <title>Komal Tech Studio | Work </title>
   <link rel="stylesheet" href="style.css" />
   <!-- particles.js cdn link -->
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
@@ -36,18 +36,19 @@
         </li>
 
 
-        <li><a href="./project.html">Projects</a></li>
+        <li><a href="#">Projects</a></li>
         <li><a href="./about.html">About</a></li>
-        <li><a href="#">Blogs</a></li>
+        <li><a href="/blog.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
 
     </nav>
   </header>
 
-  <section class="hero">
-    <div id="particles-js"></div>
 
+   <!-- hero -->
+  <section class="hero">
+      <div id="particles-js"></div>
     <div class="overlay"></div>
 
     <div class="hero-content">
@@ -63,92 +64,101 @@
     </div>
   </section>
 
-  <main>
 
-    
-<section class="blog-section">
-  <h2 class="section-title">Latest Insights</h2>
+ <!-- projects -->
+<section class="portfolio">
+  <h2>Recent Works</h2>
 
-  <div class="blog-grid">
+  <!-- FILTERS -->
+  <ul class="filters">
+    <li class="active" data-filter="all">All</li>
+    <li data-filter="frontend">Frontend Websites</li>
+    <li data-filter="wordpress">WordPress Sites</li>
+    <li data-filter="marketing">Social Media Marketing</li>
+    <li data-filter="content">Content Writing</li>
+  </ul>
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="Digital Marketing">
-      </div>
-      <div class="blog-content">
-        <span class="tag">Marketing</span>
-        <h3>Types of Digital Marketing</h3>
-        <p>Explore different digital marketing channels and how businesses grow online.</p>
-        <a href="./blog1.html">Read More →</a>
-      </div>
-    </article>
+  <!-- PROJECT GRID -->
+  <div class="projects">
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="Ecommerce Hosting">
+    <div class="project" data-category="frontend">
+      <img src="./portfolio pic.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-      <div class="blog-content">
-        <span class="tag">Ecommerce</span>
-        <h3>All About Ecommerce Hosting</h3>
-        <p>A complete guide to ecommerce hosting, performance, and scalability.</p>
-        <a href="./blog1.html">Read More →</a>
-      </div>
-    </article>
+      <span>Frontend</span>
+      <h3>Frontend Portfolio</h3>
+    </div>
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="Beginner Ecommerce">
+    <div class="project" data-category="wordpress">
+      <img src="./wordpress.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-      <div class="blog-content">
-        <span class="tag">Beginner</span>
-        <h3>Beginner’s Guide to Ecommerce (2026)</h3>
-        <p>Everything beginners need to launch their first ecommerce store.</p>
-        <a href="./blog1.html">Read More →</a>
-      </div>
-    </article>
+      <span>WordPress</span>
+      <h3>Business Website</h3>
+    </div>
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="WordPress Hosting">
+    <div class="project" data-category="marketing">
+      <img src="./insta-post.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-      <div class="blog-content">
-        <span class="tag">WordPress</span>
-        <h3>WordPress Hosting in 2026</h3>
-        <p>Key features and trends shaping WordPress hosting in 2026.</p>
-        <a href="./blog1.html">Read More →</a>
-      </div>
-    </article>
+      <span>Marketing</span>
+      <h3>Instagram Campaign</h3>
+    </div>
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="Ecommerce Evolution">
+    <div class="project" data-category="content">
+      <img src="./blog.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-      <div class="blog-content">
-        <span class="tag">Trends</span>
-        <h3>Ecommerce Evolution in 2026</h3>
-        <p>How AI, automation, and UX are transforming ecommerce.</p>
-        <a href="./blog1.html">Read More →</a>
-      </div>
-    </article>
+      <span>Content</span>
+      <h3>SEO Blogs</h3>
+    </div>
 
-    <article class="blog-card">
-      <div class="blog-img">
-        <img src="./blog.png" alt="7 Ps of Marketing">
+    <div class="project" data-category="frontend">
+      <img src="./kbiz-.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-      <div class="blog-content">
-        <span class="tag">Marketing</span>
-        <h3>The 7 Ps of Marketing</h3>
-        <p>Understand the modern 7 Ps and their role in digital success.</p>
-        <a href="./blog1.html">Read More →</a>
+      <span>Frontend</span>
+      <h3>Landing Page</h3>
+    </div>
+
+    <div class="project" data-category="marketing">
+      <img src="./fb.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
       </div>
-    </article>
+      <span>Marketing</span>
+      <h3>Facebook Ads</h3>
+    </div>
+
+    <!-- NEW DUMMY PROJECTS -->
+    <div class="project" data-category="wordpress">
+      <img src="./wordpress.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
+      </div>
+      <span>WordPress</span>
+      <h3>E-commerce Store</h3>
+    </div>
+
+    <div class="project" data-category="content">
+      <img src="./blog.png" alt="">
+      <div class="overlay">
+        <a href="project-details.html">View More →</a>
+      </div>
+      <span>Content</span>
+      <h3>Website Copywriting</h3>
+    </div>
 
   </div>
 </section>
 
 
-  </main>
-  <footer class="footer">
+ <footer class="footer">
   <div class="footer-container">
 
     <!-- Brand Section -->
@@ -172,9 +182,9 @@
       <h4>Explore Links</h4>
       <ul>
          <li><a href="./index.html">Home</a></li>
-        <li><a href="./project.html">Projects</a></li>
+        <li><a href="#">Projects</a></li>
         <li><a href="./about.html">About</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>
        
       </ul>
@@ -188,7 +198,7 @@
         <li><a href="./wordpress.html">WordPress</a></li>
         <li><a href="./marketing.html">Social Media Marketing</a></li>
         <li><a href="/writing.html">Content Writing</a></li>
-        <li><a href="./seo.html">SEO</a></li>
+        <li><a href="./style.css">SEO</a></li>
       </ul>
     </div>
 
@@ -217,6 +227,34 @@
     <p>© 2026 by <strong>komaltechstudio</strong>. All rights reserved.</p>
   </div>
 </footer>
+
+
+
+
+<script>
+const filters = document.querySelectorAll(".filters li");
+const projects = document.querySelectorAll(".project");
+
+filters.forEach(filter => {
+  filter.addEventListener("click", () => {
+
+    filters.forEach(f => f.classList.remove("active"));
+    filter.classList.add("active");
+
+    const category = filter.getAttribute("data-filter");
+
+    projects.forEach(project => {
+      if (category === "all" || project.dataset.category === category) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -6,9 +6,9 @@
   <title>Komal Tech Studio</title>
   <link rel="stylesheet" href="style.css" />
   <!-- particles.js cdn link -->
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
-  <!-- stats.js lib -->
-  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -39,7 +39,7 @@
         </li>
 
 
-        <li><a href="./work.html">Works</a></li>
+        <li><a href="./project.html">Projects</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="/blog.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -49,6 +49,7 @@
   </header>
   <!-- hero -->
   <section class="hero">
+      <div id="particles-js"></div>
     <div class="overlay"></div>
 
     <div class="hero-content">
@@ -65,26 +66,111 @@
   </section>
 
 
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="intro">
-      <h1>I'm Komal Bibi, <br>
-        Wordpress & Web Developer <br>
-        from Peshawar, Pakistan.</h1>
-    </div>
 
-    <div class="description">
-      I am a passionate web developer specializing in building modern, responsive, and user-focused websites. I work
-      with HTML, CSS, JavaScript, and WordPress to create visually appealing and functional digital experiences. Along
-      with development, I manage social media platforms, optimize websites for search engines, and create engaging
-      content that helps brands grow, connect with audiences, and establish a strong online presence.
-    </div>
-    <button class="resume-btn">DOWNLOAD RESUME</button>
 
-  </section>
+
 
   <!-- services -->
 
+<section class="services">
+  <h2 class="section-title">What We Do</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="icon">⌨</span>
+      <h3>Web Development</h3>
+      <p>Modern, responsive and performance-driven websites built with clean code.</p>
+        <a href="wordpress.html" class="view-btn">Service Details →</a>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">🧩</span>
+      <h3>WordPress Development</h3>
+      <p>Custom WordPress solutions, speed optimization and reliable maintenance.</p>
+      <a href="wordpress.html" class="view-btn">Service Details →</a>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">🔍</span>
+      <h3>SEO Optimization</h3>
+      <p>Improve search rankings with smart on-page SEO and technical optimization.</p>
+      <a href="seo.html" class="view-btn">Service Details →</a>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">📢</span>
+      <h3>Social Media Marketing</h3>
+      <p>Content planning and growth strategies to boost brand engagement.</p>
+      <a href="smm.html" class="view-btn">Service Details →</a>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">✍</span>
+      <h3>Content Writing</h3>
+      <p>Clear, engaging and SEO-friendly content for websites and blogs.</p>
+      <a href="content.html" class="view-btn">Service Details →</a>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">📊</span>
+      <h3>Analytics & Insights</h3>
+      <p>Data-driven insights to improve performance and digital decisions.</p>
+      <a href="analytics.html" class="view-btn">Service Details →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <section class="services">
+  <h2 class="section-title">What We Do</h2>
+
+  <div class="services-grid">
+
+    <a href="webdev.html" class="service-card">
+      <span class="icon">⌨</span>
+      <h3>Web Development</h3>
+      <p>Modern, responsive and performance-driven websites built with clean code.</p>
+ <a href="./webdev.html">See Details →</a>
+
+    </a>
+
+    <a href="wordpress.html" class="service-card">
+      <span class="icon">🧩</span>
+      <h3>WordPress Development</h3>
+      <p>Custom WordPress solutions, speed optimization and reliable maintenance.</p>
+    </a>
+
+    <a href="seo.html" class="service-card">
+      <span class="icon">🔍</span>
+      <h3>SEO Optimization</h3>
+      <p>Improve search rankings with smart on-page SEO and technical optimization.</p>
+    </a>
+
+    <a href="smm.html" class="service-card">
+      <span class="icon">📢</span>
+      <h3>Social Media Marketing</h3>
+      <p>Content planning and growth strategies to boost brand engagement.</p>
+    </a>
+
+    <a href="content.html" class="service-card">
+      <span class="icon">✍</span>
+      <h3>Content Writing</h3>
+      <p>Clear, engaging and SEO-friendly content for websites and blogs.</p>
+    </a>
+
+    <a href="analytics.html" class="service-card">
+      <span class="icon">📊</span>
+      <h3>Analytics & Insights</h3>
+      <p>Data-driven insights to improve performance and digital decisions.</p>
+    </a>
+
+  </div>
+</section> -->
+
+
+<!-- 
   <section class="services">
     <h2 class="section-title">What We Do</h2>
 
@@ -142,84 +228,26 @@
           We write clear, engaging, and SEO-friendly content for websites,
           blogs, and social media that communicates value effectively.
         </p>
-      </div>
+      </div> -->
 
-    </div>
-  </section>
-  <!-- projects -->
-  <section class="portfolio">
 
-    <h2>Recent Works</h2>
 
-    <!-- FILTERS -->
-    <ul class="filters">
-      <li class="active" data-filter="all">All</li>
-      <li data-filter="frontend">Frontend Websites</li>
-      <li data-filter="wordpress">WordPress Sites</li>
-      <li data-filter="marketing">Social Media Marketing</li>
-      <li data-filter="content">Content Writing</li>
-    </ul>
-
-    <!-- PROJECT GRID -->
-    <div class="projects">
-
-      <div class="project" data-category="frontend" data-title="Frontend Portfolio"
-        data-desc="Modern frontend website using HTML, CSS and JS." data-img="images/p1.jpg"
-        data-link="https://example.com">
-        <img src="./portfolio pic.png">
-        <span>Frontend</span>
-        <h3>Frontend Portfolio</h3>
-      </div>
-
-      <div class="project" data-category="wordpress" data-title="WordPress Business Site"
-        data-desc="Custom WordPress website for a business client." data-img="images/p2.jpg"
-        data-link="https://example.com">
-        <img src="./wordpress.png">
-        <span>WordPress</span>
-        <h3>Business Website</h3>
-      </div>
-
-      <div class="project" data-category="marketing" data-title="Instagram Marketing"
-        data-desc="Social media campaign for brand growth." data-img="images/p3.jpg" data-link="https://example.com">
-        <img src="./insta-post.png">
-        <span>Marketing</span>
-        <h3>Instagram Campaign</h3>
-      </div>
-
-      <div class="project" data-category="content" data-title="Blog Writing" data-desc="SEO optimized blog articles."
-        data-img="images/p4.jpg" data-link="https://example.com">
-        <img src="./blog.png">
-        <span>Content</span>
-        <h3>SEO Blogs</h3>
-      </div>
-
-      <div class="project" data-category="frontend" data-title="Landing Page" data-desc="High conversion landing page."
-        data-img="images/p5.jpg" data-link="https://example.com">
-        <img src="./kbiz-.png">
-        <span>Frontend</span>
-        <h3>Landing Page</h3>
-      </div>
-
-      <div class="project" data-category="marketing" data-title="Facebook Ads"
-        data-desc="Paid ads strategy & creatives." data-img="images/p6.jpg" data-link="https://example.com">
-        <img src="./fb.png">
-        <span>Marketing</span>
-        <h3>Facebook Ads</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MODAL -->
-  <div class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-img">
-      <h3 id="modal-title"></h3>
-      <p id="modal-desc"></p>
-      <a id="modal-link" target="_blank" class="view-btn">View Project</a>
-    </div>
+<!-- <a href="webdev.html" class="service-link">
+  <div class="service-box">
+    <i class="fa-solid fa-code"></i>
+    <h3>Frontend Web Development</h3>
+    <p>
+      We build modern, responsive, and user-friendly websites using HTML, CSS,
+      JavaScript, and Bootstrap with a strong focus on performance and clean UI.
+    </p>
   </div>
+</a> -->
+
+
+    <!-- </div>
+  </section>
+  --> 
+ 
 
   <footer class="footer">
   <div class="footer-container">
@@ -293,6 +321,7 @@
 
   
   
+
   <script src="script.js"></script>
 
 
