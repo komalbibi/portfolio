@@ -43,26 +43,26 @@ function typeEffect() {
 typeEffect();
 
 
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    color: { value: "#fdf7f7" },
-    size: { value: 2 },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#000000",
-      opacity: 0.4,
-      width: 1
-    },
-    move: { speed: 1 }
-  },
-  interactivity: {
-    events: {
-      onhover: { enable: true, mode: "grab" }
-    }
-  }
-});
+// particlesJS("particles-js", {
+//   particles: {
+//     number: { value: 80 },
+//     color: { value: "#fdfdfd" },
+//     size: { value: 2 },
+//     line_linked: {
+//       enable: true,
+//       distance: 150,
+//       color: "#fdfdfd",
+//       opacity: 0.4,
+//       width: 1
+//     },
+//     move: { speed: 1 }
+//   },
+//   interactivity: {
+//     events: {
+//       onhover: { enable: true, mode: "grab" }
+//     }
+//   }
+// });
 
 
 
