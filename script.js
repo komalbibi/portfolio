@@ -1,12 +1,11 @@
 
 
 /* NAVBAR SCROLL EFFECT */
-const navbar = document.getElementById("navbar");
+ const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-  navbar.classList.toggle("scrolled", window.scrollY > 80);
-});
-
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 80);
+  });
 /* TEXT ROTATION */
 const words = [
   "WEB DEVELOPMENT",
@@ -40,7 +39,7 @@ function typeEffect() {
   setTimeout(typeEffect, isDeleting ? 60 : 120);
 }
 
-typeEffect();
+// typeEffect();
 
 
 particlesJS("particles-js", {
